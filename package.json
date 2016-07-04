@@ -1,0 +1,27 @@
+{
+  "name": "Guided-Tour-Mapper",
+  "version": "1.0.0",
+  "description": "Guided-Tour-Mapper is a simple way to comfortable visulize your GPS-Tracks",
+  "main": "./server/server.js",
+  "scripts": {
+    "start": "node ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McMorri/Guided-Tour-Mapper.git"
+  },
+  "author": [
+    "Moritz Migge <m_migg01@uni-muenster.de>",
+    "Torben Kraft <tkraf03@uni-muenster.de"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/McMorri/Guided-Tour-Mapper/issues"
+  },
+  "homepage": "https://github.com/McMorri/Guided-Tour-Mapper/issues#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "colors": "^1.1.2",
+    "express": "^4.13.4"
+  }
+}
