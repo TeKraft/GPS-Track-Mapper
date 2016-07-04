@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	<title>Guided-Tour-Mapper</title>
+
+	<meta name="author" content="Moritz Migge, Torben Kraft">
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Import Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/css/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body id="body">
+
+	<div class="container">
+
+		<br>
+	
+		<!-- row for the navbar -->
+		<div class="row">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<a class="navbar-brand">Guided-Tour-Mapper</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">
+									<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Map
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		  
+		<div class="row"> 
+			<div class="col-md-8">
+				<div id="map"></div>
+				<br>
+			</div>
+			
+			<div id="featuredatabase" class="col-md-4">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a class="text-muted" data-toggle="collapse" data-target="#ajaxForm">
+								<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+								Neuen Track hinzufügen
+							</a>
+						</div>
+<form id="testerer">
+						<div id="trackDetails" class="input-group" style>
+  							<span class="input-group-addon" id="basic-addon1"><b>Track-Name</b></span>
+  							<input id="trackName" type="text" class="form-control" placeholder="Geben Sie einen Track Namen an" aria-describedby="basic-addon1">
+						</div>
+
+						<div id="trackDetails" class="form-group">
+  							<label>Track-Beschreibung</label>
+  							<textarea id="trackBeschreibung" class="form-control" rows="2" placeholder="Hier könnte eine Trackbeschreibung stehen" ></textarea>
+						</div>
+						<div id="trackfile" class="panel-body panel-collapse collapse in" id="ajaxForm">
+							<p><i>Datei auswählen und zur Karte hinzufügen:</i></p>
+							<div class="input-group">
+								<input type="file" id="files" name="files[]"/>
+								<output id="list"></output>
+							</div>
+						</div>
+					</div>
+				</div>
+</form>
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a class="text-muted" data-toggle="collapse" data-target="#ajaxForm">
+								<span aria-hidden="true"></span>
+								Track Details
+							</a>
+						</div>
+
+						<div id="trackDetails" class="input-group" style>
+  							<span class="input-group-addon" id="basic-addon1"><b>Track-Name</b></span>
+  							<input id="trackNameView" type="text" class="form-control">
+						</div>
+
+						<div id="trackDetails" class="form-group">
+  							<label>Beschreibung des aktuellen Tracks</label>
+  							<textarea  id="trackBeschreibungView" readonly class="form-control" rows="9" placeholder="Klicken Sie auf einen Track in der Tabelle um eine Beschreibung anzuzeigen." ></textarea>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="panel-group">
+					<!-- form to save and load features from the DB -->		  
+					<div class="panel panel-default">
+						<table id="tableDBTrack" class="table table-hover">
+							<thead>
+								<tr>
+									<td><b>#</b></td>
+									<td><b>Name</b></td>
+									<td><b>StartZeit</b></td>
+									<td><b>End-Zeit</b></td>
+									<td><b>Track-Distanz</b></td>
+									<td><b>Track-Dauer</b></td>
+									<td><b>Durchschnitts-Geschw.</b></td>
+								</tr>
+							</thead>
+							<tbody id="tableDBTrackContents"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div> 
+
+	</div> 
+
+	<!-- Library imports -->
+	<script type="text/javascript" src="lib/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/js/leaflet.js"></script>
+	<script type="text/javascript" src="lib/js/gpx.js"></script>
+
+	<!-- Script imports -->
+	<script type="text/javascript" src="js/mapInit.js" defer=true></script>
+	<script type="text/javascript" src="js/trackOptions.js"></script>
+
+  </body>
+
+</html>
