@@ -1,0 +1,20 @@
+#map {
+	height: 600px;
+}
+
+#gjsoncode {
+	padding: 30px;
+}
+
+.likeButton {
+    font-weight: bold;
+    font-style:italic;
+}
+
+#trackDetails {
+	margin: 6px;
+}
+
+.active {
+	color: DarkBlue;
+}
