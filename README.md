@@ -7,7 +7,7 @@
 ## Authors:
 
 * [Moritz Migge](https://github.com/McMorri)
-* [Torben Kraft](https://github.com/Tkraf03)
+* [Torben Kraft](https://github.com/TeKraft)
 
 
 Here you can find the source code for the web server.
